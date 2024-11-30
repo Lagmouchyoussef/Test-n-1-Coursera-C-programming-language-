@@ -1,2 +1,29 @@
-# Test-n-1-Coursera-C-programming-language-
-This program prompts the user to input two integers, calculates their sum using the sum function, and determines the smaller of the two using the minimum function The results are displayed on the screen GCC / GNU compiler
+#include <stdio.h>
+#include <stdlib.h>
+
+int sum(int A, int B) {
+    int S;
+    S = A + B;
+
+    return S;
+}
+
+int minimum(int A, int B) {
+    if (A > B)
+        return B;
+    else
+        return A;
+}
+
+int main() {
+    int A, B;
+    printf("Enter A: \n");
+    scanf("%d", &A);
+    printf("Enter B: \n");
+    scanf("%d", &B);
+    
+    printf("The sum of %d and %d is: %d\n", A, B, sum(A, B));
+    printf("The minimum of %d and %d is: %d", A, B, minimum(A, B));
+
+    return 0;
+}
